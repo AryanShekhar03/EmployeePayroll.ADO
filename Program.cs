@@ -6,7 +6,47 @@ namespace EmployeePayroll_Ado
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Emp Payroll");
+            Console.WriteLine(" Welcome to Employee Payroll Service ADO.NET \n");
+            EmployeeRepo repo = new EmployeeRepo();
+            EmployeeModel employee = new EmployeeModel();
+
+            employee.EmployeeId = 1;
+            employee.EmployeeName = "Mr Shekhar";
+            employee.PhoneNumber = 8447831498;
+            employee.Address = "Chandrapur";
+            employee.Department = "Full Stack";
+            employee.Gender = 'M';
+            employee.BasicPay = 10000;
+            employee.Deductions = 200;
+            employee.TaxablePay = 250;
+            employee.Tax = 240;
+            employee.NetPay = 500000;
+            employee.StartDate = DateTime.Now;
+            employee.City = "Chandrapur";
+            employee.Country = "India";
+            employee.JobDescription = "Manager";
+            employee.Month = "Sept";
+            employee.EmployeeSalary = 40000;
+            employee.SalaryId = 2409;
+
+            //repo.AddEmployee(employee);
+
+            //Console.WriteLine("\n Data is Stored in DataBase.");
+
+            //repo.GetEmployeeDetails();
+
+            //Console.WriteLine("Your Data is Executed");
+
+            Salary salary = new Salary();
+
+            employee.EmployeeSalary = 12340;
+            employee.SalaryId = 2409;
+            employee.EmployeeId = 0;
+            employee.Month = "Sept";
+
+            salary.UpdateEmployeeSalary(employee);
+
+            salary.GetEmployeeDetails();
         }
     }
 }

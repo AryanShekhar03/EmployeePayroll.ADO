@@ -1,0 +1,5 @@
+.vs
+bin/
+obj/
+EmployeePayroll_Ado.csproj
+EmployeePayroll_Ado.sln
